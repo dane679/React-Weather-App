@@ -21,11 +21,19 @@ The project is designed as both a functional application and a case study, with 
 
 ### Mobile
 
+<div align="center">
+
 <img src="public/media/Mobile1.png" width="400" />
+
 <img src="public/media/Mobile2.png" width="400" />
+
 <img src="public/media/Mobile3.png" width="400" />
+
 <img src="public/media/Mobile4.png" width="400" />
+
 <img src="public/media/Mobile5.png" width="400" />
+
+</div>
 
 ---
 
