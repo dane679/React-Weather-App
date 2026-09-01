@@ -10,15 +10,22 @@ The project is designed as both a functional application and a case study, with 
 
 ### Desktop
 
-<img src="public/media/Desktop.png" width="800" />
+<img src="public/media/Desktop1.png" width="800" />
+<img src="public/media/Desktop2.png" width="800" />
+<img src="public/media/Desktop3.png" width="800" />
 
 ### Tablet
 
-<img src="public/media/Tablet.png" width="800" />
+<img src="public/media/Tablet1.png" width="800" />
+<img src="public/media/Tablet2.png" width="800" />
 
 ### Mobile
 
-<img src="public/media/Mobile.png" width="800" />
+<img src="public/media/Mobile1.png" width="400" />
+<img src="public/media/Mobile2.png" width="400" />
+<img src="public/media/Mobile3.png" width="400" />
+<img src="public/media/Mobile4.png" width="400" />
+<img src="public/media/Mobile5.png" width="400" />
 
 ---
 
