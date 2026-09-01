@@ -1,0 +1,82 @@
+.LocationInfo {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 16px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.LocationInfo-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.LocationInfo-city {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.LocationInfo-divider {
+  width: 100%;
+  height: 2px;
+  background: rgba(255,255,255,0.4);
+}
+
+.LocationInfo-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.LocationInfo-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.LocationInfo-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+}
+
+.LocationInfo-value {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.LocationInfo-value--date {
+  font-size: 11px;
+}
+
+.LocationInfo-map-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding-bottom: 2px;
+}
+
+.LocationInfo-map-link:hover {
+  color: white;
+}

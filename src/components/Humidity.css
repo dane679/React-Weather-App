@@ -1,0 +1,87 @@
+.Humidity {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 16px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.Humidity-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.Humidity-amount {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-block;
+  text-align: center;
+}
+
+.Humidity-amount::after {
+  content: attr(data-unit);
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.7;
+  vertical-align: super;
+}
+
+.Humidity-bar-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 4px;
+}
+
+.Humidity-track {
+  position: relative;
+  height: 6px;
+  border-radius: 9999px;
+  background: rgba(255,255,255,0.12);
+}
+
+.Humidity-fill {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #34d399, #7dd3fc);
+  transition: width 0.4s ease;
+}
+
+.Humidity-thumb {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+  transition: left 0.4s ease;
+}
+
+.Humidity-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  pointer-events: none;
+}
+
+.Humidity {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

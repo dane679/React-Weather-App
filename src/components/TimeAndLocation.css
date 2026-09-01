@@ -1,0 +1,42 @@
+.Time-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px 0px 0px;
+    flex-direction: column;
+}
+.Time-text{
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.Location-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 8px 0px;
+}
+.Location-text{
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 600;
+}
+
+@media (max-width: 900px){
+    .Time-container {
+        margin: 20px 0px 0px;
+    }
+    .Time-text{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .Location-container{
+        margin: 4px 0px;
+    }
+    .Location-text{
+        font-size: 24px;
+        line-height: 28px;
+    }
+}

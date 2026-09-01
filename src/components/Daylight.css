@@ -1,0 +1,69 @@
+.Daylight {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 16px;
+  padding: 20px 24px 0 24px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.Daylight-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.Daylight-times {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.Daylight-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.Daylight-time-value { 
+  font-size: 20px; 
+  font-weight: 700; 
+  line-height: 1; 
+  text-align: center;
+}
+.Daylight-time-label { 
+  font-size: 11px; 
+  color: rgba(255, 255, 255, 0.6); 
+}
+.Daylight-pct-value {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.Daylight-pct-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+.Daylight-arc-wrap {
+  width: 100%;
+  margin-bottom: -2px;
+}
+
+.Daylight-arc-wrap svg {
+  overflow: visible;
+}

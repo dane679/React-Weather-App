@@ -1,0 +1,159 @@
+.WindCompass {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 16px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.WindCompass-title{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.Compass{
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.2);
+    align-self: center;
+}
+
+.north,
+.northeast,
+.east,
+.southeast,
+.south,
+.southwest,
+.west,
+.northwest{
+    position:absolute;
+    font-weight:700;
+    pointer-events: none;
+}
+
+.north{
+    top:-25px;
+    left:50%;
+    transform:translateX(-50%);
+}
+.northeast{
+    right:-2px;
+}
+.east{
+    right:-18px;
+    top:50%;
+    transform:translateY(-50%);
+}
+.southeast{
+    right:-2px;
+    bottom:0px;
+}
+.south{
+    bottom:-25px;
+    left:50%;
+    transform:translateX(-50%);
+}
+.southwest{
+    left:-9px;
+    bottom:0px;
+}
+.west{
+    left:-25px;
+    top:50%;
+    transform:translateY(-50%);
+}
+.northwest{
+    left:-9px;
+}
+
+.Compass-arrow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 5px;
+  height: 55px;
+  background: white;
+  border-radius: 2px;
+  transform-origin: bottom center;
+}
+
+.Compass::before{
+    content: "";
+    position: absolute;
+    width: 145%;
+    height: 145%;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+.Compass::after{
+    content: "";
+    position: absolute;
+    width: 5%;
+    height: 5%;
+    border-radius: 50%;
+    background: #38bdf8;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cardinal {
+  position: absolute;
+  font-weight: 700;
+  font-size: 12px;
+  left: 50%; top: 50%;
+  line-height: 1;
+}
+.c-N  { transform: translate(-50%, -50%) translateY(-72px); }
+.c-NE { transform: translate(-50%, -50%) translate(51px, -51px); }
+.c-E  { transform: translate(-50%, -50%) translateX(72px); }
+.c-SE { transform: translate(-50%, -50%) translate(51px, 51px); }
+.c-S  { transform: translate(-50%, -50%) translateY(72px); }
+.c-SW { transform: translate(-50%, -50%) translate(-51px, 51px); }
+.c-W  { transform: translate(-50%, -50%) translateX(-72px); }
+.c-NW { transform: translate(-50%, -50%) translate(-51px, -51px); }
+
+.Compass-dot {
+  position: absolute;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #38bdf8;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.Compass {
+    position: relative;
+    width: min(140px, 80%);
+    aspect-ratio: 1;
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.2);
+    align-self: center;
+}
+.Compass {
+    position: relative;
+    width: min(140px, 80%);
+    aspect-ratio: 1 / 1;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.2);
+    align-self: center;
+    flex-shrink: 0;
+}

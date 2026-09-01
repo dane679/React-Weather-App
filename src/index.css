@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@layer base {
+  html {
+    font-family: "poppins", sans-serif;
+    color: white;
+  }
+}
+*{
+  margin: 0;
+}
+.outer-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container{
+  max-width: 1200px;
+  padding: 24px 96px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.TopButtons{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 8px 0 26px;
+  gap: 6px;
+}
+.TopButtons .button {
+  position: relative;
+  padding: 8px 18px;
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  transition: 0.2s ease;
+  color: var(---accent-clr);
+  font-family: "Poppins", sans-serif;
+  background: none;
+  white-space: nowrap;
+}
+.TopButtons .button:hover{
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  transform: translateY(-2px);
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+.TopButtons .button::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color: var(---accent-clr);
+  border-radius: 2px;
+  transition: width 0.25s ease;
+}
+.TopButtons .button:hover::after, 
+.TopButtons .button.active::after {
+  width: 80%;
+}
+.TopButtons .button::before {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color: var(---accent-clr);
+  border-radius: 2px;
+  transition: width 0.25s ease;
+}
+.TopButtons .button:hover::before, 
+.TopButtons .button.active::before {
+  width: 60%;
+}
+.TopButtons .button:hover,
+.TopButtons .button.active {
+  background-color: rgb(255, 255, 255);
+  transform: translateY(-2px);
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+.TopButtons .button:active {
+  transform: translateY(0px) scale(0.97);
+  box-shadow: none;
+}
+.outer-container.cool-bg .TopButtons .button:hover,
+.outer-container.cool-bg .TopButtons .button.active {
+  ---accent-clr:#3b82f6 ;
+}
+.outer-container.mild-bg .TopButtons .button:hover,
+.outer-container.mild-bg .TopButtons .button.active {
+  ---accent-clr:#65a30d ;
+}
+.outer-container.warm-bg .TopButtons .button:hover,
+.outer-container.warm-bg .TopButtons .button.active {
+  ---accent-clr:#c2410c  ;
+}
+
+
+.Inputs{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+.Inputs input{
+  color: rgb(107, 114, 128);
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 300;
+  padding: 8px 8px;
+  width: 100%;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  transition: 0.2s;
+  box-sizing: border-box;
+}
+.outer-container.cool-bg .Inputs input {
+  ---bx3:#0891b2;
+}
+.outer-container.mild-bg .Inputs input {
+  ---bx3:#059669;
+}
+.outer-container.warm-bg .Inputs input {
+  ---bx3:#ca8a04;
+}
+.Inputs input::placeholder{
+  text-transform: none;
+}
+.Inputs input:focus{
+  box-shadow: 0 0 0 5px var(---bx3), 0 0 0 8px white ;
+}
+
+.BiSearch{
+  cursor: pointer;
+  transition: all ease-out 0.4s;
+  margin: 0 12px;
+}
+.BiSearch:hover{
+  transform: scale(1.4);
+}
+
+.BiCurrentLocation{
+  cursor: pointer;
+  transition: all ease-out 0.4s;
+  margin: 0 4px;
+}
+.BiCurrentLocation:hover{
+  transform: scale(1.4);
+}
+
+.search-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+}
+
+.units-container{
+  display: flex;
+  width: 25%;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+button.units {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  display: inline-block;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all ease-out 0.4s;
+  padding: 4px 6px;
+  margin: 0;
+  border-radius: 4px;
+  color: inherit;
+  font-family: inherit;
+}
+
+.outer-container.cool-bg .units:hover,
+.outer-container.cool-bg .units.active {
+  ---accent-clr:#3b82f6 ;
+}
+.outer-container.mild-bg .units:hover, 
+.outer-container.mild-bg .units.active {
+  ---accent-clr:#65a30d ;
+}
+.outer-container.warm-bg .units:hover, 
+.outer-container.warm-bg .units.active {
+  ---accent-clr:#c2410c  ;
+}
+.units:hover,
+.units.active {
+  transform: scale(1.25);
+  background-color: rgb(255, 255, 255);
+  color: var(---accent-clr);
+  transform: translateY(-2px);
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+
+.units-divider{
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  margin: 0 5px;
+  cursor: default;
+}
+.cool-bg{
+  background-image: linear-gradient( #0891b2, #3b82f6 );
+}
+.mild-bg{
+  background-image: linear-gradient( #059669  , #65a30d  );
+}
+.warm-bg{
+  background-image: linear-gradient( #ca8a04, #c2410c  );
+}
+
+.weather-details{
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+  display: flex; 
+  flex-direction: row; 
+  gap: 20px; 
+  align-items: stretch; 
+  flex-wrap: wrap; 
+  justify-content: space-between;
+}
+.weather-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+.weather-column:first-child {
+  align-items: end;
+}
+.weather-column:nth-child(1) {
+  align-items: end;
+}
+.c-end{
+  align-items: normal;
+}
+
+@media (max-width: 1200px) {
+  .weather-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .weather-details > * {
+    flex: 1 1 calc(50% - 10px);
+    box-sizing: border-box;
+  }
+  .weather-column {
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .WindCompass {
+    order: 3;
+  }
+
+  .LocationInfo {
+    order: 2;
+  }
+    .Visibility, .CloudCoverage, .Humidity, .HighLow{
+    padding: 12px;
+    width: 100%;
+  }
+  .HighLow{
+    gap: 6px;
+  }
+  .HighLow-item{
+    gap: 0px;
+  }
+  .HighLow-val{
+    font-size: 18px;
+  }
+  .HighLow-label{
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container{
+    padding: 20px 48px;
+  }
+  .Navbar{
+    padding: 0 20px;
+  }
+  .TopButtons{
+    margin-bottom: 20px;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .TopButtons .button {
+    font-size: 16px;
+    padding: 6px 16px;
+    flex: 0 0 calc(25% - 20px);
+  }
+
+  .search-container {
+    width: 80%;
+  }
+  .units-container {
+    width: 20%;
+  }
+  .BiSearch{
+    margin-right: 8px;
+    margin-left: 10px;
+  }
+  .BiCurrentLocation{
+    margin: 0 4px 0;
+  }
+  button.units {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .units-divider {
+    font-size: 20px;
+    margin: 0 4px;
+    font-weight: 600;
+}
+
+  .TemperatureAndDetails-container{
+    padding: 6px 0 16px 0;
+  }
+  .horizontalDetails-container{
+    padding: 8px 0;
+    gap: 20px;
+  }
+   .horizontalDetails svg{
+    flex-shrink: 0;
+   }
+  .Forecast-type{
+    margin-top: 20px;
+  }
+  .HighLow-val{
+    font-size: 16px;
+  }
+  .HighLow-current-label{
+    font-size: 8px;
+  }
+  .HighLow-label{
+    font-size: 10px;
+  }
+    .weather-column {
+      gap: 20px;
+      flex-basis: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+  .container{
+    padding: 20px 24px;
+  }
+  .weather-details .LocationInfo, .weather-details .WindCompass {
+    flex: 0 0 100%;
+  }
+  .weather-column {
+    flex-basis: 100%;
+  }
+  .Daylight{
+    padding: 20px 14px 4px;
+  }
+}
+@media (max-width: 600px) {
+  .search-container {
+    width: 100%;
+  }
+
+  .units-container {
+    display: none;
+  }
+
+  .Daylight-time-value {
+    font-size: 18px;
+  }
+  .Daylight-pct-value {
+    font-size: 24px;
+  }
+  .Daylight-times {
+    padding: 0 4px;
+  }
+  
+}
+
+@media (max-width: 550px) {
+  .TopButtons {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .TopButtons .button {
+    flex: 0 0 calc(33.333% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .weather-column {
+    flex-direction: column;
+  }
+
+  .Visibility,
+  .CloudCoverage,
+  .Humidity,
+  .HighLow {
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 450px) {
+  .TopButtons {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .TopButtons .button {
+    flex: 0 0 calc(33.333% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+  }
+}

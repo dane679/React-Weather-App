@@ -1,0 +1,91 @@
+.CloudCoverage {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 16px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  gap: 0px;
+  justify-content: space-between;
+}
+
+.CloudCoverage-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.CloudCoverage-ring-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px 0;
+}
+
+.CloudCoverage-ring {
+  position: relative;
+  width: 110px;
+  height: 110px;
+}
+
+.CloudCoverage-ring svg {
+  transform: rotate(-90deg);
+}
+
+.ring-bg {
+  fill: none;
+  stroke: rgba(255,255,255,0.12);
+  stroke-width: 8;
+}
+
+.ring-fill {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.6s ease, stroke 0.6s ease;
+}
+
+.ring-label {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.ring-pct  { 
+  font-size: 24px; 
+  font-weight: 700; 
+  display: block; 
+}
+.ring-unit { 
+  font-size: 11px; 
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.CloudCoverage-badge {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 4px;
+  align-self: flex-start;
+  background: white; 
+  font-weight: 700;
+}
+
+.cool-bg .CloudCoverage-badge{
+  color: #3b82f6;
+}
+.mild-bg .CloudCoverage-badge {
+  color: #65a30d;
+}
+.warm-bg .CloudCoverage-badge { 
+  color: #c2410c; 
+}

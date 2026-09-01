@@ -1,0 +1,100 @@
+.Visibility {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 16px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  gap: 2px;
+  justify-content: space-between;
+}
+
+.Visibility-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.Visibility-value {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+.Visibility-amount {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+}
+.Visibility-unit {
+  font-size: 13px;
+}
+
+.Visibility-badge {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 5px;
+  align-self: flex-start;
+  background-color: white;
+  border: 2px solid white;
+}
+.badge-poor      { 
+  color: #e30f0f; 
+  border-color: #e30f0f; 
+}
+.badge-moderate  {
+  color: #bc9808; 
+  border-color: #bc9808; 
+}
+.badge-good {
+  color: #0f9ee1; 
+  border-color: #0f9ee1; 
+}
+.badge-excellent { 
+  color: #0bc74f; 
+  border-color: #0bc74f; 
+}
+
+.Visibility-bar-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 4px;
+}
+
+.Visibility-track {
+  position: relative;
+  height: 6px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg,
+    rgba(255,255,255,0.1) 0%,
+    rgba(56,189,248,0.4)  40%,
+    rgba(56,189,248,0.85) 100%
+  );
+}
+
+.Visibility-thumb {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 0 2px rgba(56,189,248,0.6);
+  transition: left 0.4s ease;
+}
+
+.Visibility-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  pointer-events: none;
+}
