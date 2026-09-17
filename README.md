@@ -300,7 +300,6 @@ src/
 │
 ├── App.jsx
 ├── index.css
-├── index.js
 ├── main.jsx
 └── style.css
 ```
