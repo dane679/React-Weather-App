@@ -5,10 +5,19 @@ const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/';
 
 const getWeatherData = (infoType, searchParams) => {
-    const url = new URL(BASE_URL + infoType);
-    url.search = new URLSearchParams({ ...searchParams, appid: API_KEY });
-    return fetch(url)
-    .then((res) => res.json());
+    const url = import.meta.env.DEV
+        ? (() => {
+            const devUrl = new URL(BASE_URL + infoType);
+            devUrl.search = new URLSearchParams({ ...searchParams, appid: API_KEY });
+            return devUrl;
+        })()
+        : (() => {
+            const prodUrl = new URL(`/api/${infoType}`, window.location.origin);
+            prodUrl.search = new URLSearchParams({ ...searchParams, infoType });
+            return prodUrl;
+        })();
+    
+    return fetch(url).then((res) => res.json());
 };
 
 const iconURLFromCode = (icon) =>  `https://openweathermap.org/img/wn/${icon}@2x.png`;
